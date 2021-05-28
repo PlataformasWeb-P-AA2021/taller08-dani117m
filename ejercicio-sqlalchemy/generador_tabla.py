@@ -24,11 +24,11 @@ class mundial(Base):
     firstName = Column(String)
     shirtName = Column(String)
     pos = Column(String)
-    height = Column(String)
-    caps = Column(String)
-    goals = Column(String)
+    height = Column(Integer)
+    caps = Column(Integer)
+    goals = Column(Integer)
     def _repr_(self):
-        return "mundial: numero=%s FIFADisplayName=%s country=%s lastName=%s firstName=%s shirtName=%s POS=%s height=%s caps=%s goals=%s" % (
+        return "mundial: numero=%s FIFADisplayName=%s country=%s lastName=%s firstName=%s shirtName=%s POS=%s height=%d caps=%d goals=%d" % (
                           self.numero,
                           self.fifaDis,
                           self.country,

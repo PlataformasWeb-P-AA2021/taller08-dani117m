@@ -19,14 +19,14 @@ session = Session()
 
 # Obtener todos los registros de 
 # la entidad Club
-jugadores = session.query(mundial).order_by(mundial.goals).all()
+jugadores = session.query(mundial).order_by(mundial.goals.desc()).all()
 
 # Se recorre la lista a través de un ciclo
 # repetitivo for en python
 print("Ordenados por el número de goles")
 for s in jugadores:
     ##print("%s" % (s))
-    print("---------")
+    print("-------------------------------------------------")
     print("Nombre: %s Goles: %s" % (s.fifaDis, s.goals))
 # Obtener todos los registros de 
 # la entidad Jugador

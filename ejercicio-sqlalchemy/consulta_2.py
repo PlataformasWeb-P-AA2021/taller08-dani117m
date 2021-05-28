@@ -19,14 +19,14 @@ session = Session()
 
 # Obtener todos los registros de 
 
-jugadores = session.query(mundial).order_by(mundial.height).all()
+jugadores = session.query(mundial).order_by(mundial.height.desc()).all()
 
 # Se recorre la lista a través de un ciclo
 # repetitivo for en python
 print("ordenados por la estatura")
 for s in jugadores:
     ##print("%s" % (s))
-    print("---------")
+    print("-----------------------------------------------")
     print("Nombre: %s altura: %s" % (s.fifaDis, s.height))
 # Obtener todos los registros de 
 
